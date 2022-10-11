@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI Calculator</title>
+    <script>
+        function SI(){
+            x=parseInt(f1.tb1.value)
+            y=parseInt(f1.tb2.value)
+            w=parseInt(f1.tb3.value)
+            z=x*y*w/100
+            document.getElementById("para").innerHTML=z
+        }
+        function Amt(){
+            x=parseInt(f1.tb1.value)
+            y=parseInt(f1.tb2.value)
+            w=parseInt(f1.tb3.value)
+            z=x+(x*y*w/100)
+            document.getElementById("para").innerHTML=z
+        }
+        
+    </script>
+</head>
+
+<body>
+    <form id="f1">
+
+        <input type="number" id="tb1" placeholder="Input Principal">
+        
+        <input type="number" id="tb2" placeholder="Input Rate">
+        
+        <input type="number" id="tb3" placeholder="Input Time (in years)">
+        <hr>
+        <button type="button" onclick="SI()" style="color: teal;">Get SI</button>
+        <button type="button" onclick="Amt()" style="color: teal;">Get Amount</button>
+        <p>Result:</p>
+        <p id="para"></p>
+    </form>
+</body>
+
+</html>     
